@@ -7,6 +7,7 @@
   of 0x0. In the main excutable file the sections will be placed according the linker script. All the unknows symbols in an object file will have a value of 0x0 and will be resolved by the linker.
 - The three main tasks of a linker are: Resolution of symbols, grouping of sections and placement of sections to generate an executable. The linker script is required for grouping and placements of the 
   sections in the executable.
+- The debugger and loaders can understand the .elf (executable and linkable format) file. Loaders are a part of an OS.
 - Linker script is a collection of statements. These statements set a particular option. Some of these are used to select input files, group the input sections of the file and name the output sections
   of the file. Two statements SECTIONS and MEMORY have fundamental and prevasive impact on the linking process. MEMORY is optional and if not give linker will assume the default memory:{0x00000000 - 
   0xffffffff}.

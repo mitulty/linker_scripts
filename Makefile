@@ -39,8 +39,7 @@ $(READELF_OUT): $(TARGET).elf
 main.elf: $(OBJS) $(LD_SCRIPT)
 ifeq ($(LS),yes)
 # $(LD) -s -Bsymbolic -gc-sections -T$(LD_SCRIPT) -static -Map=$(LD_MAP) -o $@ $(OBJS)
-	$(LD) -T$(LD_SCRIPT) -static -Map=$(LD_MAP) -o $@ $(OBJS)
-
+	$(LD) -T$(LD_SCRIPT) -Map=$(LD_MAP) -o $@ $(OBJS)
 else
 	$(LD) -static -Map=$(LD_MAP) -o $@ $(OBJS)
 endif
